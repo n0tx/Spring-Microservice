@@ -11,6 +11,7 @@
 	<groupId>com.hexagon</groupId>
 	<artifactId>student-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>student-service</name>
 	<description>Student Microservice</description>
 	<properties>
@@ -72,6 +73,16 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.0</version>
+				<configuration>
+					<to>
+						<image>rcandra612/${project.artifactId}:v1</image>
+					</to>
 				</configuration>
 			</plugin>
 		</plugins>
